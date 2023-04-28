@@ -151,8 +151,8 @@ export default function OrderScreen() {
       <h2 className="text-center mb-4 mt-1">Order ID: {orderId}</h2>
       <div className="container">
         <div className="row">
-          <div className="col-md-8 border-1">
-            <div className="row">
+          <div className="col-md-8 border-1 ">
+            <div className="row d-flex align-items-center justify-content-center">
               <div className="card w-75 mb-2 ">
                 <div className="card-body p-2">
                   <h4 className="card-title">Shipping</h4>
