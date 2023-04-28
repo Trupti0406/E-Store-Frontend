@@ -49,7 +49,7 @@ export default function ShippingScreen() {
       })
     );
     navigate("/payment");
-    console.log("Navigated to next page");
+    // console.log("Navigated to next page");
   };
   return (
     <>
@@ -58,9 +58,14 @@ export default function ShippingScreen() {
       </Helmet>
       <CheckOutBar step1 step2></CheckOutBar>
       <h2 className="mb-3 fw-bold text-center">Shipping Address</h2>
-      <form onSubmit={submitHandler} className="shipping-form mt-3 mb-4">
+      <form
+        action="https://e-store-p9j0.onrender.com/payment"
+        method="POST"
+        onSubmit={submitHandler}
+        className="shipping-form mt-3 mb-4"
+      >
         <Form.Group className="mb-3" controlId="fullName">
-          <Form.Label className='fw-semibold'>Full Name</Form.Label>
+          <Form.Label className="fw-semibold">Full Name</Form.Label>
           <Form.Control
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
@@ -68,7 +73,7 @@ export default function ShippingScreen() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="address">
-          <Form.Label className='fw-semibold'>Address</Form.Label>
+          <Form.Label className="fw-semibold">Address</Form.Label>
           <Form.Control
             value={address}
             onChange={(e) => setAddress(e.target.value)}
@@ -76,7 +81,7 @@ export default function ShippingScreen() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="city">
-          <Form.Label className='fw-semibold'>City</Form.Label>
+          <Form.Label className="fw-semibold">City</Form.Label>
           <Form.Control
             value={city}
             onChange={(e) => setCity(e.target.value)}
@@ -84,7 +89,7 @@ export default function ShippingScreen() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="postalCode">
-          <Form.Label className='fw-semibold'>Postal Code</Form.Label>
+          <Form.Label className="fw-semibold">Postal Code</Form.Label>
           <Form.Control
             value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
@@ -92,7 +97,7 @@ export default function ShippingScreen() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="country">
-          <Form.Label className='fw-semibold'>Country</Form.Label>
+          <Form.Label className="fw-semibold">Country</Form.Label>
           <Form.Control
             value={country}
             onChange={(e) => setCountry(e.target.value)}
