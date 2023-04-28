@@ -87,7 +87,7 @@ export default function PlaceOrderScreen() {
       <h2 className="text-center mb-4 mt-1">Review Order</h2>
       <div className="container">
         <div className="row">
-          <div className="col-8 border-1">
+          <div className="col-md-8 border-1">
             <div className="row">
               <div className="card w-75 mb-2 ">
                 <div className="card-body p-2">
@@ -161,7 +161,7 @@ export default function PlaceOrderScreen() {
             </div>
           </div>
 
-          <div className="col-4">
+          <div className="col-md-4">
             <div className="card text-center">
               <h4 className="card-header fw-bolder px-2 py-3">Order Summary</h4>
               <div className="card-body text-start">
