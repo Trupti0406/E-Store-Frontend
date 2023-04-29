@@ -47,6 +47,7 @@ export default function ShippingScreen() {
         country,
       })
     );
+    window.location.href = "/payment";
     navigate("/payment");
     // console.log("Navigated to next page");
   };
