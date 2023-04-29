@@ -40,7 +40,7 @@ function App() {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          `https://estore-server.onrender.com/api/products/categories`
+          `http://localhost:5000/api/products/categories`
         );
         setCategories(data);
       } catch (err) {
@@ -176,7 +176,6 @@ function App() {
         </div>
         <main>
           <Routes>
-            <Route path="/" element={<HomeScreen />} />
             <Route path="/product/:slug" element={<ProductScreen />} />
             <Route path="/cart" element={<CartScreen />} />
             <Route path="/signin" element={<SignInScreen />} />
@@ -186,8 +185,11 @@ function App() {
             <Route path="/orderhistoy" element={<OrderHistoryScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/search" element={<SearchScreen />} />
+
             <Route path="/shipping" element={<ShippingScreen />} />
+
             <Route path="/payment" element={<PaymentMethodScreen />} />
+            <Route path="/" element={<HomeScreen />} />
           </Routes>
         </main>
         <footer className="text-center p-3 bg-dark text-white">

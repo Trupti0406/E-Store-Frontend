@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-import CheckOutBar from "../components/CheckOutBar";
 import { Store } from "../Store";
 
 export default function ShippingScreen() {
@@ -56,14 +55,10 @@ export default function ShippingScreen() {
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
-      <CheckOutBar step1 step2></CheckOutBar>
-      <h2 className="mb-3 fw-bold text-center">Shipping Address</h2>
-      <form
-        action="https://e-store-p9j0.onrender.com/payment"
-        method="POST"
-        onSubmit={submitHandler}
-        className="shipping-form mt-3 mb-4"
-      >
+      <h2 className="mb-3 fw-bold text-center fw-bolder text-center py-3 px-3">
+        Shipping Address
+      </h2>
+      <form onSubmit={submitHandler} className="shipping-form mt-3 mb-4">
         <Form.Group className="mb-3" controlId="fullName">
           <Form.Label className="fw-semibold">Full Name</Form.Label>
           <Form.Control

@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Store } from "../Store";
-import CheckOutBar from "../components/CheckOutBar";
 import { useEffect } from "react";
 import { useReducer } from "react";
 import { toast } from "react-toastify";
@@ -47,7 +46,7 @@ export default function PlaceOrderScreen() {
       dispatch({ type: "CREATE_REQUEST" });
 
       const { data } = await Axios.post(
-        "https://estore-server.onrender.com/api/orders",
+        "http://localhost:5000/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,
@@ -80,11 +79,12 @@ export default function PlaceOrderScreen() {
   }, [cart, navigate]);
   return (
     <>
-      <CheckOutBar step1 step2 step3 step4></CheckOutBar>
       <Helmet>
         <title>Preview Order</title>
       </Helmet>
-      <h2 className="text-center mb-4 mt-1">Review Order</h2>
+      <h2 className="text-center mb-4 mt-1 fw-bolder text-center py-3 px-3">
+        Review Order
+      </h2>
       <div className="container">
         <div className="row">
           <div className="col-md-8 border-1">
