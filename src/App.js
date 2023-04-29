@@ -42,7 +42,7 @@ function App() {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          `https://e-store-p9j0.onrender.com/api/products/categories`
+          `https://estore-server.onrender.com/api/products/categories`
         );
         setCategories(data);
       } catch (err) {
