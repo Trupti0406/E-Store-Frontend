@@ -188,9 +188,7 @@ function App() {
             <Route path="/orderhistoy" element={<OrderHistoryScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/search" element={<SearchScreen />} />
-
             <Route path="/shipping" element={<ShippingScreen />} />
-
             <Route path="/payment" element={<PaymentMethodScreen />} />
             <Route path="/" element={<HomeScreen />} />
           </Routes>

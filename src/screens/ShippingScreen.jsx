@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
 import { Store } from "../Store";
 
 export default function ShippingScreen() {
   const navigate = useNavigate();
+  const history = useHistory();
   const { state, dispatch: contextDispatch } = useContext(Store);
   const {
     userInfo,
@@ -47,7 +48,7 @@ export default function ShippingScreen() {
         country,
       })
     );
-    navigate("/payment");
+    history.push("/payment");
     // window.location.href = "/payment";
     // console.log("Navigated to next page");
   };
