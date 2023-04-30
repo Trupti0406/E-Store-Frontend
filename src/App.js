@@ -31,7 +31,6 @@ function App() {
     localStorage.removeItem("shippingAddress");
     localStorage.removeItem("paymentMethod");
     localStorage.removeItem("__paypal_storage__");
-
     window.location.href = "/signin";
   };
 
